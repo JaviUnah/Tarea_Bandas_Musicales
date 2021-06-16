@@ -1,0 +1,42 @@
+﻿@model BandasMusicales.Models.Banda
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h1>Borrar</h1>
+<h3>Esta seguro de eliminar esta pedazo de banda</h3>
+
+<div>
+    <h4>Bandas</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaGenero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaGenero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaPais)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaPais)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BandaId"/>
+        <input type="submit" class="btn btn-danger" value="Borrar" />
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+    </form>
+   
+</div>
